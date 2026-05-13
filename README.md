@@ -1,11 +1,11 @@
-# 🐉 Kali Linux on VirtualBox — VDI Quick Setup Guide
+#  Kali Linux on VirtualBox — VDI Quick Setup Guide
 
 > **For 42 Network / school lab machines** where your home directory has a limited disk quota.  
 > This guide uses the pre-built VDI image so **no installation is required** — just download, extract, and run.
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 1. [Change Browser Download Location to goinfre](#step-1--change-browser-download-location-to-goinfre)
 2. [Download the Kali VDI](#step-2--download-the-kali-vdi)
@@ -21,14 +21,14 @@
 > **Why?** Your home directory (`~`) on 42 / school machines typically has a very small quota (a few GB).  
 > `/goinfre/<youruser>` is a large **local scratch space** on the machine — the right place for a ~4 GB download.
 
-### 🦊 Firefox
+###  Firefox
 
 1. Open Firefox → click the **☰** menu → **Settings**
 2. Scroll down to **Files and Applications**
 3. Under **Downloads**, click **Browse…** next to *Save files to*
 4. Navigate to `/goinfre/<youruser>` and click **Select Folder**
 
-### 🌐 Chrome / Chromium
+###  Chrome / Chromium
 
 1. Open Chrome → click **⋮** → **Settings**
 2. Click **Downloads** in the left sidebar
@@ -41,7 +41,7 @@
 
 ## Step 2 — Download the Kali VDI
 
-1. Go to 👉 [https://www.kali.org/get-kali/#kali-virtual-machines](https://www.kali.org/get-kali/#kali-virtual-machines)
+1. Go to  [https://www.kali.org/get-kali/#kali-virtual-machines](https://www.kali.org/get-kali/#kali-virtual-machines)
 2. Select **VirtualBox** as your platform
 3. Click the download button — the `.7z` archive (e.g. `kali-linux-2026.x-virtualbox-amd64.7z`) will be saved to `/goinfre/<youruser>`
 
@@ -77,7 +77,7 @@ After extraction you will see a folder containing these files:
 **Double-click** the `.vbox` file in the extracted folder.  
 This automatically registers and opens the machine in VirtualBox Manager — no manual setup needed.
 
-> 💡 Alternatively, in VirtualBox go to **Machine → Add…** and select the `.vbox` file.
+>  Alternatively, in VirtualBox go to **Machine → Add…** and select the `.vbox` file.
 
 ---
 
@@ -89,17 +89,17 @@ This automatically registers and opens the machine in VirtualBox Manager — no 
 
 ---
 
-## 🔑 Default Credentials
+## Default Credentials
 
 | Username | Password |
 |----------|----------|
 | `kali`   | `kali`   |
 
-> ⚠️ Change the default password after first login for security.
+>  Change the default password after first login for security.
 
 ---
 
-## 💡 Tips
+## Tips
 
 - The `/goinfre` folder is **local to the machine** — if you switch computers, you'll need to re-download.
 - To save disk space after setup, you can delete the original `.7z` archive.
