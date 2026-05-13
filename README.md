@@ -33,3 +33,13 @@ You should end up with a .vdi file (the virtual disk image).
 
 
 or directly with FIle explorer just click in .7z file
+
+
+Start the VM
+
+Select your VM and click Start
+Kali Linux will boot directly — no installation needed
+
+
+Default Credentials
+Username Password kali kali
