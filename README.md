@@ -20,5 +20,3 @@ Click Downloads in the left sidebar
 Next to Location, click Change
 Navigate to /goinfre/<youruser> and click Select
 
-
-💡 Replace <youruser> with your actual username, e.g. /goinfre/jdoe
