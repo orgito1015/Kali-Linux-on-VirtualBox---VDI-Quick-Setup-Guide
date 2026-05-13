@@ -1,93 +1,107 @@
-# Kali Linux on VirtualBox VDI Quick Setup Guide
+# 🐉 Kali Linux on VirtualBox — VDI Quick Setup Guide
 
+> **For 42 Network / school lab machines** where your home directory has a limited disk quota.  
+> This guide uses the pre-built VDI image so **no installation is required** — just download, extract, and run.
 
-Step 1 — Change Browser Download Location to goinfre
+---
 
-Why? On school/lab machines (e.g. 42 Network), your home directory has a very limited quota. 
-The /goinfre/<youruser> directory is a large local scratch space — perfect for big files like the Kali VDI.
+## 📋 Table of Contents
 
-Firefox
+1. [Change Browser Download Location to goinfre](#step-1--change-browser-download-location-to-goinfre)
+2. [Download the Kali VDI](#step-2--download-the-kali-vdi)
+3. [Extract the Archive](#step-3--extract-the-archive)
+4. [Open the VM in VirtualBox](#step-4--open-the-vm-in-virtualbox)
+5. [Start the VM](#step-5--start-the-vm)
+6. [Default Credentials](#-default-credentials)
 
-Open Firefox → click the ☰ menu → Settings
-Scroll to the Files and Applications section
-Under Downloads, click Browse… next to "Save files to"
-Navigate to /goinfre/<youruser> and click Select Folder
+---
 
-Chrome / Chromium
+## Step 1 — Change Browser Download Location to goinfre
 
-Open Chrome → ⋮ menu → Settings
-Click Downloads in the left sidebar
-Next to Location, click Change
-Navigate to /goinfre/<youruser> and click Select
+> **Why?** Your home directory (`~`) on 42 / school machines typically has a very small quota (a few GB).  
+> `/goinfre/<youruser>` is a large **local scratch space** on the machine — the right place for a ~4 GB download.
 
-Download the Kali VDI
+### 🦊 Firefox
 
-Go to https://www.kali.org/get-kali/#kali-virtual-machines
-Select VirtualBox as your platform
-Download the .7z archive (e.g., kali-linux-2024.x-virtualbox-amd64.7z) — it will save to /goinfre/<youruser>
-Extract it using 7-Zip or:
+1. Open Firefox → click the **☰** menu → **Settings**
+2. Scroll down to **Files and Applications**
+3. Under **Downloads**, click **Browse…** next to *Save files to*
+4. Navigate to `/goinfre/<youruser>` and click **Select Folder**
 
-bash   cd /goinfre/<youruser>
-   7z x kali-linux-*.7z
-You should end up with a .vdi file (the virtual disk image).
+### 🌐 Chrome / Chromium
 
+1. Open Chrome → click **⋮** → **Settings**
+2. Click **Downloads** in the left sidebar
+3. Next to **Location**, click **Change**
+4. Navigate to `/goinfre/<youruser>` and click **Select**
 
-or directly with FIle explorer just click in .7z file
+![Chrome Downloads settings showing /goinfre path](photo1.jpg)
 
+---
 
-Start the VM
+## Step 2 — Download the Kali VDI
 
-Select your VM and click Start
-Kali Linux will boot directly — no installation needed
+1. Go to 👉 [https://www.kali.org/get-kali/#kali-virtual-machines](https://www.kali.org/get-kali/#kali-virtual-machines)
+2. Select **VirtualBox** as your platform
+3. Click the download button — the `.7z` archive (e.g. `kali-linux-2026.x-virtualbox-amd64.7z`) will be saved to `/goinfre/<youruser>`
 
+---
 
-Default Credentials
-Username Password kali kali
+## Step 3 — Extract the Archive
 
+You can extract in two ways:
 
-# Kali Linux on VirtualBox VDI Quick Setup Guide
+**Option A — File Manager (easiest):**  
+Simply double-click the `.7z` file in your file manager to extract it.
 
+**Option B — Terminal:**
+```bash
+cd /goinfre/<youruser>
+7z x kali-linux-*.7z
+```
 
-Step 1 — Change Browser Download Location to goinfre
+After extraction you will see a folder containing these files:
 
-Why? On school/lab machines (e.g. 42 Network), your home directory has a very limited quota. 
-The /goinfre/<youruser> directory is a large local scratch space — perfect for big files like the Kali VDI.
+![Extracted Kali VirtualBox files in file manager](<Screenshot From 2026-05-13 18-37-09.png>)
 
-Firefox
+| File | Description |
+|------|-------------|
+| `kali-linux-*.vdi` | Virtual disk image (the main disk) |
+| `kali-linux-*.vbox` | VirtualBox machine config — **open this to add the VM** |
+| `Logs/` | VirtualBox runtime logs |
 
-Open Firefox → click the ☰ menu → Settings
-Scroll to the Files and Applications section
-Under Downloads, click Browse… next to "Save files to"
-Navigate to /goinfre/<youruser> and click Select Folder
+---
 
-Chrome / Chromium
+## Step 4 — Open the VM in VirtualBox
 
-Open Chrome → ⋮ menu → Settings
-Click Downloads in the left sidebar
-Next to Location, click Change
-Navigate to /goinfre/<youruser> and click Select
+**Double-click** the `.vbox` file in the extracted folder.  
+This automatically registers and opens the machine in VirtualBox Manager — no manual setup needed.
 
-Download the Kali VDI
+> 💡 Alternatively, in VirtualBox go to **Machine → Add…** and select the `.vbox` file.
 
-Go to https://www.kali.org/get-kali/#kali-virtual-machines
-Select VirtualBox as your platform
-Download the .7z archive (e.g., kali-linux-2024.x-virtualbox-amd64.7z) — it will save to /goinfre/<youruser>
-Extract it using 7-Zip or:
+---
 
-bash   cd /goinfre/<youruser>
-   7z x kali-linux-*.7z
-You should end up with a .vdi file (the virtual disk image).
+## Step 5 — Start the VM
 
+1. Select **kali-linux-…** in the VirtualBox Manager sidebar
+2. Click **▶ Start**
+3. Kali Linux boots directly — **no installation required**
 
-or directly with FIle explorer just click in .7z file
+---
 
+## 🔑 Default Credentials
 
-Start the VM
+| Username | Password |
+|----------|----------|
+| `kali`   | `kali`   |
 
-Select your VM and click Start
-Kali Linux will boot directly — no installation needed
+> ⚠️ Change the default password after first login for security.
 
+---
 
-Default Credentials
-Username Password kali kali
+## 💡 Tips
+
+- The `/goinfre` folder is **local to the machine** — if you switch computers, you'll need to re-download.
+- To save disk space after setup, you can delete the original `.7z` archive.
+- Kali Linux comes with hundreds of pre-installed security tools out of the box.
 
