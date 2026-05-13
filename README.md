@@ -20,3 +20,16 @@ Click Downloads in the left sidebar
 Next to Location, click Change
 Navigate to /goinfre/<youruser> and click Select
 
+Download the Kali VDI
+
+Go to https://www.kali.org/get-kali/#kali-virtual-machines
+Select VirtualBox as your platform
+Download the .7z archive (e.g., kali-linux-2024.x-virtualbox-amd64.7z) — it will save to /goinfre/<youruser>
+Extract it using 7-Zip or:
+
+bash   cd /goinfre/<youruser>
+   7z x kali-linux-*.7z
+You should end up with a .vdi file (the virtual disk image).
+
+
+or directly with FIle explorer just click in .7z file
